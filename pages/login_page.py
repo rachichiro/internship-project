@@ -1,3 +1,5 @@
+from time import sleep
+
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
@@ -12,6 +14,7 @@ class LoginPage(BasePage):
 
     def open_reelly(self):
         self.open_url('https://soft.reelly.io')
+        sleep(5)
 
     def login(self):
         self.driver.find_element(*self.EMAIL_LOGIN).send_keys('rachaelmelfi@gmail.com')
